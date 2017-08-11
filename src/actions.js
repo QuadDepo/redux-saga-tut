@@ -1,17 +1,34 @@
-export const IMAGE_SELECTED = 'IMAGE_SELECTED';
-const LOAD_IMAGES = 'LOAD_IMAGES'
+// export const IMAGE_SELECTED = 'IMAGE_SELECTED';
+// const LOAD_IMAGES = 'LOAD_IMAGES'
+//
+//
+// export function selectImage(image) {
+//   return {
+//     type: IMAGE_SELECTED,
+//     image
+//   }
+// }
+//
+//
+// export function loadImages() {
+//   return {
+//     type: LOAD_IMAGES
+//   }
+// }
 
+export const PRODUCTS_LOADED = 'PRODUCTS_LOADED';
+export const PRODUCT_IMAGES = 'PRODUCT_IMAGES';
 
-export function selectImage(image) {
+export function loadProducts(products){
   return {
-    type: IMAGE_SELECTED,
-    image
+  type: PRODUCTS_LOADED,
+  products
   }
 }
 
-
-export function loadImages() {
+export function getImages(images) {
   return {
-    type: LOAD_IMAGES
+    type: PRODUCT_IMAGES,
+    images
   }
 }

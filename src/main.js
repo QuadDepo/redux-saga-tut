@@ -8,13 +8,13 @@ import createSagaMiddleware from 'redux-saga'
 import reducer from './reducer'
 
 import Gallery from './Gallery'
-import {loadImages, watchForLoadImages} from './sagas'
+import {loadProducts} from './sagas'
 
 
 const store = createStore(
   reducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-  applyMiddleware(createSagaMiddleware(watchForLoadImages))
+  applyMiddleware(createSagaMiddleware(loadProducts))
 );
 
 
